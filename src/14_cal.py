@@ -22,3 +22,17 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+currentYear = datetime.now().year
+currentMonth = datetime.now().month
+
+userMonth = input("Please enter a month(number): ")
+userYear = input("Please enter a year(number): ")
+if userMonth:
+    currentMonth = int(userMonth)
+
+if userYear:
+    currentYear = int(userYear)
+print(userMonth)
+print(calendar.month(currentYear, currentMonth))
+print("If you haven't enter a month or year, it will default to your current system calender's month or year")
